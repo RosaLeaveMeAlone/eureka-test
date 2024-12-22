@@ -10,4 +10,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ChocoBillyController::class)->group(function() {
     Route::post('calculate-order', 'calculateOrder');
+    Route::post('crc', 'crc');
 });
