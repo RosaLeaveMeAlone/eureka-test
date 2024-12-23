@@ -5,6 +5,12 @@ Este documento explica cómo construir y ejecutar un proyecto Docker con comando
 
 ---
 
+## **0. Construir la Imagen Docker**
+
+Copiar .env.example y renombrar a .env
+
+---
+
 ## **1. Construir la Imagen Docker**
 
 Ejecuta el siguiente comando para construir la imagen Docker:
