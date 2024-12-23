@@ -53,7 +53,7 @@ class ChocoBillyController extends Controller
 
         $filePath = Storage::disk('public')->path($fileName);
 
-        return response()->download($filePath);
+        return response()->download($filePath,'output.txt');
     }
 
     public function crc(CalculateOrderRequest $request)
@@ -129,6 +129,7 @@ class ChocoBillyController extends Controller
         $outputFile = tempnam(sys_get_temp_dir(), 'output_results_');
         file_put_contents($outputFile, implode("\n", $results));
 
-        return response()->download($outputFile);
+        return response()->download($outputFile, 'output.txt');
+
     }
 }
