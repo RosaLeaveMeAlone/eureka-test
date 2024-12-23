@@ -58,6 +58,13 @@ RUN composer install --optimize-autoloader --no-dev
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
+RUN touch /var/www/html/database/database.sqlite
+
+RUN chown -R www-data:www-data /var/www/html/database
+RUN chmod -R 775 /var/www/html/database
+
+RUN php artisan migrate --force
+
 # Expose port 80 for Apache.
 EXPOSE 80
 
