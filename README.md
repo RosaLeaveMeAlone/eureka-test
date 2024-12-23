@@ -1,3 +1,30 @@
+
+# Cómo Construir y Ejecutar el Proyecto Docker
+
+Este documento explica cómo construir y ejecutar un proyecto Docker con comandos básicos.
+
+---
+
+## **1. Construir la Imagen Docker**
+
+Ejecuta el siguiente comando para construir la imagen Docker:
+
+```bash
+ docker build -t eureka-test .
+```
+
+---
+
+## **2. Ejecutar el Contenedor Docker**
+
+Ejecuta el siguiente comando para iniciar el contenedor Docker:
+
+```bash
+docker run -d -p 80:80 eureka-test
+```
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
